@@ -67,65 +67,85 @@ class BookApp {
                     author: "F. Scott Fitzgerald",
                     category: "Fiction",
                     status: "Available",
-                    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800",
+                    image: "https://api.getlitt.co/storage/books/medium/the-great-gatsby.jpeg",
                     addedDate: new Date().toISOString(),
                     history: []
                 },
                 {
                     id: Utils.generateId(),
-                    title: "Clean Code",
+                    title: "Echoes of Tomorrow",
                     author: "Robert C. Martin",
-                    category: "Technology",
+                    category: "Philosophy",
                     status: "Borrowed",
-                    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLkuf9f3HWABQ-TeBtgdrzMsuvDedV0Y4Yvw&s",
                     addedDate: new Date().toISOString(),
                     history: [{ borrower: "John Doe", borrowDate: new Date().toISOString(), returnDate: null }]
                 },
                 {
                     id: Utils.generateId(),
-                    title: "Dune",
+                    title: "Crown of Secret",
                     author: "Frank Herbert",
-                    category: "Sci-Fi",
+                    category: "Conspiracy",
                     status: "Available",
-                    image: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&q=80&w=800",
+                    image: "https://images.template.net/454183/Modern-Royal-Book-Cover-Template-edit-online.png",
                     addedDate: new Date().toISOString(),
                     history: []
                 },
                 {
                     id: Utils.generateId(),
-                    title: "Atomic Habits",
+                    title: "The Quantum Paradox",
                     author: "James Clear",
                     category: "Non-Fiction",
                     status: "Available",
-                    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800",
+                    image: "https://images.template.net/454185/Aesthetic-Ebook-Cover-Template-edit-online.png",
                     addedDate: new Date().toISOString(),
                     history: []
                 },
                 {
                     id: Utils.generateId(),
-                    title: "The Hobbit",
+                    title: "Whispers of the heart",
                     author: "J.R.R. Tolkien",
                     category: "Fiction",
                     status: "Available",
-                    image: "https://images.unsplash.com/photo-1629992101753-56d196c8aabb?auto=format&fit=crop&q=80&w=800",
+                    image: "https://images.template.net/455456/5x8-Book-Cover-Template-edit-online.png",
                     addedDate: new Date().toISOString(),
                     history: []
                 },
                 {
                     id: Utils.generateId(),
-                    title: "Steve Jobs",
+                    title: "The Last Train Home",
                     author: "Walter Isaacson",
-                    category: "Biography",
+                    category: "Fiction",
                     status: "Available",
-                    image: "https://images.unsplash.com/photo-1531297461136-82ae96c51365?auto=format&fit=crop&q=80&w=800",
+                    image: "https://images.template.net/455460/Paperback-Book-Cover-Template-edit-online.png",
                     addedDate: new Date().toISOString(),
                     history: []
-                }
+                },
+                {
+                    id: Utils.generateId(),
+                    title: "The Art of Resilience",
+                    author: "Dr. Michael Thompson",
+                    category: "Non-Fiction",
+                    status: "Available",
+                    image: "https://images.template.net/454179/Outline-Book-Cover-Template-edit-online.png",
+                    addedDate: new Date().toISOString(),
+                    history: []
+                },
+                {
+                    id: Utils.generateId(),
+                    title: "Bound by Time",
+                    author: "Jonathan Wells",
+                    category: "Fiction",
+                    status: "Available",
+                    image: "https://images.template.net/454184/Leather-Book-Cover-Template-edit-online.png",
+                    addedDate: new Date().toISOString(),
+                    history: []
+                },
             ];
             this.books = seedBooks;
             Store.saveBooks(this.books);
             
-            const seedCategories = ['Fiction', 'Technology', 'Sci-Fi', 'Non-Fiction', 'Biography'];
+            const seedCategories = ['Fiction', 'Technology', 'Sci-Fi', 'Non-Fiction', 'Biography', 'Philosophy', 'Conspiracy'];
             seedCategories.forEach(cat => {
                 if (!this.categories.includes(cat)) {
                     this.categories.push(cat);
