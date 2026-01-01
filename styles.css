@@ -196,8 +196,8 @@ ul {
 }
 
 .btn-sm {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
 }
 
 .btn-outline {
@@ -484,7 +484,7 @@ ul {
 .close-modal-btn {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
 }
 
@@ -552,6 +552,27 @@ ul {
     justify-content: flex-end;
     gap: 1rem;
     margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+}
+
+/* History Modal Styles */
+.history-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-details {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+.current-borrow {
+    color: var(--primary-color);
+    font-weight: 600;
 }

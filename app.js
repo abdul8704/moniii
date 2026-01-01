@@ -287,6 +287,7 @@ class BookApp {
                         `<button class="btn btn-primary" onclick="app.openBorrowModal('${book.id}')">Borrow</button>` : 
                         `<button class="btn btn-outline" onclick="app.returnBook('${book.id}')">Return</button>`
                     }
+                    <button class="btn btn-icon" onclick="app.viewHistory('${book.id}')" title="View History"><i class="ph ph-clock-counter-clockwise"></i></button>
                     <button class="btn btn-icon btn-danger" onclick="app.deleteBook('${book.id}')" title="Delete"><i class="ph ph-trash"></i></button>
                 </div>
             </div>
@@ -300,14 +301,14 @@ class BookApp {
 
         const container = document.getElementById('history-list-container');
         if (book.history.length === 0) {
-            container.innerHTML = '<p class="text-secondary">No history available for this book.</p>';
+            container.innerHTML = '<p class="text-secondary" style="text-align: center; padding: 1rem;">No history available for this book.</p>';
         } else {
             const historyHtml = book.history.map(h => `
-                <div style="border-bottom: 1px solid var(--border-color); padding: 0.5rem 0; font-size: 0.9rem;">
+                <div class="history-item">
                     <div><strong>${h.borrower}</strong></div>
-                    <div style="color: var(--text-secondary); font-size: 0.8rem;">
+                    <div class="history-details">
                         Borrowed: ${Utils.formatDate(h.borrowDate)} <br>
-                        Returned: ${h.returnDate ? Utils.formatDate(h.returnDate) : '<span style="color: var(--primary-color)">Current</span>'}
+                        Returned: ${h.returnDate ? Utils.formatDate(h.returnDate) : '<span class="current-borrow">Current</span>'}
                     </div>
                 </div>
             `).join('');
